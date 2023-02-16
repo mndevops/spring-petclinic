@@ -25,7 +25,7 @@ pipeline{
         stage ('Exec Maven') {
             steps {
                 rtMavenRun (
-                    tool: MVN-DFT, // Tool name from Jenkins configuration
+                    tool: 'MVN-DFT', // Tool name from Jenkins configuration
                     pom: 'pom.xml',
                     goals: 'clean install',
                     deployerId: "MAVEN_DEPLOYER"
