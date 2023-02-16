@@ -11,14 +11,14 @@ pipeline{
                 rtServer (
                     id: "JFROG-01-02",
                     url: "https://vardevops123.jfrog.io/",
-                    credentialsId: JFROG_CRED
+                    credentialsId: "JFROG_CRED"
                 )
 
                 rtMavenDeployer (
                     id: "MAVEN_DEPLOYER",
                     serverId: "JFROG-01-02",
-                    releaseRepo: qtdevops-libs-release-local,
-                    snapshotRepo: qtdevops-libs-snapshot-local
+                    releaseRepo: 'qtdevops-libs-release-local',
+                    snapshotRepo: 'qtdevops-libs-snapshot-local'
                 )
             }
         }
